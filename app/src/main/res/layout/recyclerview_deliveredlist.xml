@@ -9,13 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:text="Hello"/>
+        android:text="01740160052"/>
 
     <TextView
         android:id="@+id/tvDeliverTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="14dp"
-        android:text="Hello"/>
+        android:text="12:30 pm"/>
 
 </LinearLayout>
