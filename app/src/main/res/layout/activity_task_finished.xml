@@ -6,9 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,17 +35,22 @@
                 <TextView
                     android:id="@+id/tvSent"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight=".90"
                     android:layout_height="wrap_content"
                     android:text="SENT : 15"
                     android:textSize="18sp"
                     android:layout_margin="5dp"
                     android:textColor="@android:color/black"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="4dp"
+                    android:background="@color/cardview_dark_background" />
 
                 <TextView
                     android:id="@+id/tvDeliverd"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight=".90"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:text="DELIVERED : 12"
@@ -60,18 +68,21 @@
                 tools:listitem="@layout/recyclerview_deliveredlist">
 
             </android.support.v7.widget.RecyclerView>
-
+            <Button
+                android:id="@+id/btCopyDeliveredNumber"
+                android:layout_width="match_parent"
+                android:background="@color/email_button_color"
+                android:layout_below="@+id/rvDeliveredlist"
+                android:layout_height="wrap_content"
+                android:text="Copy Delivered Numbers"
+                android:layout_margin="5dp"
+                android:layout_alignParentBottom="true"/>
 
         </LinearLayout>
 
 
-        <Button
-            android:id="@+id/btCopyDeliveredNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Copy Delivered Numbers"
-            android:layout_alignParentBottom="true"/>
-    </RelativeLayout>
+
+    </LinearLayout>
 
 
 </ScrollView>
