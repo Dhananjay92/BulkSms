@@ -14,6 +14,7 @@
 
     <color name="icons">#FFFFFF</color>
     <color name="divider">#B6B6B6</color>
+    <color name="buttonbak">#ffd700</color>
     <color name="white">#ffffff</color>
     <color name="facebook_button_color">#3b5998</color>
     <color name="facebook_button_color_dark">#2d4373</color>
