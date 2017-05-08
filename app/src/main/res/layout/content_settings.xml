@@ -69,6 +69,7 @@
         android:id="@+id/btUpdateSettings"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:background="@color/buttonbak"
         android:text="Update Settings" />
 

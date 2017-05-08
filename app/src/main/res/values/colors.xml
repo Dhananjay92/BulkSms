@@ -3,8 +3,8 @@
 
     <!--Matarial Colors-->
 
-    <color name="colorPrimary">#B6E986</color>
-    <color name="colorPrimaryDark">#0288D1</color>
+    <color name="colorPrimary">#5FB404</color>
+    <color name="colorPrimaryDark">#5FB404</color>
     <color name="primary_light">#B3E5FC</color>
     <color name="colorAccent">#8BC34A</color>
     <color name="colorAccentDark">#71a436</color>

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:gravity="center">
 
-    <TextView
+    <android.support.v7.widget.AppCompatTextView
         android:id="@+id/tvAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -12,7 +12,7 @@
         android:textSize="18sp"
         android:text="All:10"/>
 
-    <TextView
+    <android.support.v7.widget.AppCompatTextView
         android:id="@+id/tvGp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
         android:textSize="18sp"
         android:text="Gp:10"/>
 
-    <TextView
+    <android.support.v7.widget.AppCompatTextView
         android:id="@+id/tvBlink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
         android:textSize="18sp"
         android:text="Blink:10"/>
 
-    <TextView
+    <android.support.v7.widget.AppCompatTextView
         android:id="@+id/tvRobi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
         android:textSize="18sp"
         android:text="Robi:10"/>
 
-    <TextView
+    <android.support.v7.widget.AppCompatTextView
         android:id="@+id/tvAirtel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
         android:textSize="18sp"
         android:text="Airtel:10"/>
 
-    <TextView
+    <android.support.v7.widget.AppCompatTextView
         android:id="@+id/tvTTalk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
