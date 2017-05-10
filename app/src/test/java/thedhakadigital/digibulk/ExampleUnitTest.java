@@ -1,4 +1,4 @@
-package thedhakadigital.digibulk.bulk;
+package thedhakadigital.digibulk;
 
 import org.junit.Test;
 

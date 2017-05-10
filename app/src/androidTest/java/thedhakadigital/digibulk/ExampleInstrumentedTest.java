@@ -1,4 +1,4 @@
-package thedhakadigital.digibulk.bulk;
+package thedhakadigital.digibulk;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
