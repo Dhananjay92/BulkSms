@@ -1,97 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
     android:orientation="vertical">
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/tvDNum"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="2dp"
-        android:text="Add your desired numbers :"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/white" />
 
-    <android.support.v7.widget.AppCompatEditText
-        android:id="@+id/etPhoneNumber"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_alignLeft="@+id/et_text_body"
-        android:layout_alignStart="@+id/et_text_body"
-        android:layout_below="@+id/tvDNum"
-        android:background="@android:color/white"
-        android:gravity="top"
-        android:hint="Type Numbers with comma" />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/tvDMes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etPhoneNumber"
-        android:layout_margin="2dp"
-        android:text="Add your desired message :"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/white" />
-
-    <android.support.design.widget.TextInputEditText
-        android:id="@+id/et_text_body"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_below="@+id/tvDMes"
-        android:layout_margin="5dp"
-        android:background="@android:color/white"
-        android:gravity="top"
-        android:hint="Type Message" />
-
-
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btTextClear"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/et_text_body"
-        android:layout_margin="2dp"
-        android:background="@color/colorPrimary"
-        android:text="Clear" />
-
-    <LinearLayout
-        android:id="@+id/splayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btTextClear"
-        android:layout_margin="5dp"
-        android:background="@color/white"
-        android:orientation="horizontal">
 
         <android.support.v7.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="Operator :"
+            android:id="@+id/lay"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:layout_alignParentTop="true"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textStyle="bold"
+            android:gravity="center"
+            android:text="SEND SMS"/>
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/lay"
+            android:background="@color/cardview_dark_background"
+            android:backgroundTint="@color/white" />
 
-            />
 
-        <fr.ganfra.materialspinner.MaterialSpinner
-            android:id="@+id/spOperator"
-            android:layout_width="fill_parent"
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvDNum"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/line"
+            android:text="Add your desired numbers :"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/tvDNum"
             android:background="@android:color/white"
-            app:ms_alignLabels="false"
-            app:ms_arrowColor="@color/colorPrimary"
-            app:ms_arrowSize="16dp"
-            app:ms_baseColor="@color/colorPrimary"
-            app:ms_errorColor="@color/colorPrimaryDark"
-            app:ms_floatingLabelColor="@color/colorPrimary"
-            app:ms_floatingLabelText="To"
-            app:ms_highlightColor="@color/colorPrimary"
-            app:ms_hint="Operator"
-            app:ms_multiline="false" />
-    </LinearLayout>
+            android:gravity="top"
+            android:hint="Type Numbers with comma" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvDMes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etPhoneNumber"
+            android:layout_margin="5dp"
+            android:text="Add your desired message :"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_text_body"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tvDMes"
+            android:layout_margin="5dp"
+            android:background="@android:color/white"
+            android:gravity="top"
+            android:hint="Type Message" />
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btTextClear"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/et_text_body"
+            android:layout_margin="2dp"
+            android:background="@color/colorPrimary"
+            android:text="Clear" />
+
+        <LinearLayout
+            android:id="@+id/splayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btTextClear"
+            android:layout_margin="5dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Operator :"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold"
+                />
+
+            <fr.ganfra.materialspinner.MaterialSpinner
+                android:id="@+id/spOperator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:ms_alignLabels="false"
+                app:ms_arrowColor="@color/colorPrimary"
+                app:ms_arrowSize="16dp"
+                app:ms_baseColor="@color/colorPrimary"
+                app:ms_errorColor="@color/colorPrimaryDark"
+                app:ms_floatingLabelColor="@color/colorPrimary"
+                app:ms_floatingLabelText="To"
+                app:ms_highlightColor="@color/colorPrimary"
+                app:ms_hint="Operator"
+                app:ms_multiline="false" />
+        </LinearLayout>
+
+
+
+
+
 
 
     <LinearLayout
@@ -99,18 +131,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/splayout"
-        android:layout_margin="5dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
         android:background="@android:color/white"
         android:orientation="horizontal"
-        android:padding="5dp"
-        android:weightSum="2">
+        android:padding="5dp">
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/bt_show_info"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
-
             android:layout_weight="1"
             android:background="@color/colorPrimary"
             android:text="@string/info" />
@@ -121,20 +152,21 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:background="@color/colorPrimary"
             android:text="@string/send_message" />
 
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/bt_cancel_service"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="@string/cancel_service"  />
+
     </LinearLayout>
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/bt_cancel_service"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/google_button_selector"
-        android:text="@string/cancel_service"
-        android:textColor="@color/white" />
-
-
 </RelativeLayout>
+
+</ScrollView>
