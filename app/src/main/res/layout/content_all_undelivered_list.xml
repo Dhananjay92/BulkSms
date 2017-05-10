@@ -7,7 +7,7 @@
     android:background="@color/background_color"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="bulksms.tdd.tddbulksms.activity.AllUndeliveredList"
+    tools:context="thedhakadigital.digibulk.activity.AllUndeliveredList"
     tools:showIn="@layout/activity_all_undelivered_list">
 
     <android.support.v7.widget.AppCompatTextView
