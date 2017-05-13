@@ -2,6 +2,7 @@ package thedhakadigital.digibulk.activity;
 
 import android.app.AlarmManager;
 import android.app.Dialog;
+import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -20,13 +21,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
-import thedhakadigital.digibulk.bulk.R;
+import thedhakadigital.digibulk.R;
 import thedhakadigital.digibulk.constant.Constant;
 import thedhakadigital.digibulk.database.DbManager;
 import thedhakadigital.digibulk.helper.HelperMethods;
 import thedhakadigital.digibulk.model.InfoModel;
+import thedhakadigital.digibulk.receiver.EndServiceReceiver;
+import thedhakadigital.digibulk.receiver.StartServiceReciver;
 import thedhakadigital.digibulk.sharedpref.SharedPref;
 import thedhakadigital.digibulk.service.SmsBroadCastService;
 import fr.ganfra.materialspinner.MaterialSpinner;
@@ -278,10 +283,8 @@ public class MainActivity extends AppCompatActivity {
         long startTime = sharedPref.getKeyStartServiceTime();
         long endTime = sharedPref.getKeyEndServiceTime();
 
-        Intent intent = new Intent(getApplicationContext(), SmsBroadCastService.class);
-        startService(intent);
 
-        /*PendingIntent pendingStartServiceIntent;
+        PendingIntent pendingStartServiceIntent;
         PendingIntent pendingEndServiceIntent;
 
         Intent startIntent = new Intent(getApplicationContext(), StartServiceReciver.class);
@@ -310,8 +313,7 @@ public class MainActivity extends AppCompatActivity {
         // Create a calendar object that will convert the date and time value in milliseconds to date.
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(sharedPref.getKeyStartServiceTime());
-        Toast.makeText(this, "Service will start at "+ formatter.format(calendar.getTime()), Toast.LENGTH_SHORT).show();*/
-
+        Toast.makeText(this, "Service will start at "+ formatter.format(calendar.getTime()), Toast.LENGTH_SHORT).show();
     }
 
     public void clearOperatorCounter(){

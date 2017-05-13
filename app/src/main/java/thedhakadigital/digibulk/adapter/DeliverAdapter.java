@@ -6,7 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import java.util.ArrayList;
-import thedhakadigital.digibulk.bulk.R;
+
+import thedhakadigital.digibulk.R;
 import thedhakadigital.digibulk.model.InfoModel;
 
 /**

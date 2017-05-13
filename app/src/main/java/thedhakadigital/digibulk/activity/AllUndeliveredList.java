@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import thedhakadigital.digibulk.bulk.R;
+import thedhakadigital.digibulk.R;
 import thedhakadigital.digibulk.adapter.DeliverAdapter;
 import thedhakadigital.digibulk.database.DbManager;
 import thedhakadigital.digibulk.model.InfoModel;

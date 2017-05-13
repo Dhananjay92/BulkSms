@@ -17,7 +17,7 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-import thedhakadigital.digibulk.bulk.R;
+import thedhakadigital.digibulk.R;
 import thedhakadigital.digibulk.constant.Constant;
 import thedhakadigital.digibulk.sharedpref.SharedPref;
 import thedhakadigital.digibulk.utils.TimeDialogFragment;

@@ -26,7 +26,6 @@
         <receiver android:name="thedhakadigital.digibulk.receiver.StartServiceReciver" />
         <receiver android:name="thedhakadigital.digibulk.receiver.EndServiceReceiver" />
 
-        <activity android:name="thedhakadigital.digibulk.activity.TaskFinished" />
         <activity
             android:name="thedhakadigital.digibulk.activity.UndeliveredList"
             android:label="@string/title_activity_undelivered_list"
@@ -36,6 +35,14 @@
             android:label="@string/title_activity_start"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+
+        <activity
+            android:name="thedhakadigital.digibulk.activity.TaskFinished"
+            android:label="Task Finished"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+
         <activity
             android:name="thedhakadigital.digibulk.activity.Settings"
             android:label="@string/title_activity_settings"

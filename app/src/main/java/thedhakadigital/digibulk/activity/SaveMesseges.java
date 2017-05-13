@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import thedhakadigital.digibulk.bulk.R;
+import thedhakadigital.digibulk.R;
 
 public class SaveMesseges extends AppCompatActivity {
 

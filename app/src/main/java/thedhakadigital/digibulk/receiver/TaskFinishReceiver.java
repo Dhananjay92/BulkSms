@@ -19,7 +19,7 @@ public class TaskFinishReceiver extends WakefulBroadcastReceiver {
         turnOnScreen();
         Intent wakeIntent = new Intent();
 
-        wakeIntent.setClassName("bulksms.tdd.tddbulksms", "bulksms.tdd.tddbulksms.activity.TaskFinished");
+        wakeIntent.setClassName("thedhakadigital.digibulk", "thedhakadigital.digibulk.activity.TaskFinished");
         wakeIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(wakeIntent);
     }

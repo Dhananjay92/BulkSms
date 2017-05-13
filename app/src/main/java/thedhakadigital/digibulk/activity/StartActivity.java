@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import thedhakadigital.digibulk.bulk.R;
+import thedhakadigital.digibulk.R;
 import thedhakadigital.digibulk.database.DbManager;
 import thedhakadigital.digibulk.helper.HelperMethods;
 
