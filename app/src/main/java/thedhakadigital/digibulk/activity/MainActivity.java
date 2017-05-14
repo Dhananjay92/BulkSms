@@ -248,10 +248,6 @@ public class MainActivity extends AppCompatActivity {
             case "019": {
                 return Constant.BLINK;
             }
-
-            case "555": {
-                return Constant.EMULATOR;
-            }
             default:
                 return "";
         }
@@ -281,11 +277,11 @@ public class MainActivity extends AppCompatActivity {
         tvAirtel = (TextView) dialog.findViewById(R.id.tvAirtel);
 
         tvAll.setText("All: " + operatorNumber[0]);
-        tvGp.setText("Gp: " + operatorNumber[1]);
-        tvAirtel.setText("Airtel: " + operatorNumber[2]);
+        tvGp.setText("grameenphone: " + operatorNumber[1]);
+        tvAirtel.setText("airtel: " + operatorNumber[2]);
         tvTTalk.setText("Tale Talk: " + operatorNumber[3]);
-        tvRobi.setText("Robi: " + operatorNumber[4]);
-        tvBLink.setText("BLink: " + operatorNumber[5]);
+        tvRobi.setText("robi: " + operatorNumber[4]);
+        tvBLink.setText("banglalink: " + operatorNumber[5]);
 
         clearOperatorCounter();
 
@@ -340,9 +336,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addOperatorSpinner() {
-        String[] ITEMS = {Constant.ALL_PHONE, Constant.GP, Constant.ROBI, Constant.BLINK, Constant.AIRTEL, Constant.TTALK, Constant.EMULATOR};
+        String[] ITEMS = {Constant.ALL_PHONE, Constant.GP, Constant.ROBI, Constant.BLINK, Constant.AIRTEL, Constant.TTALK};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, ITEMS);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.list_row_dropdown_item);
         spOperator.setAdapter(adapter);
     }
 

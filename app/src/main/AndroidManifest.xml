@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="thedhakadigital.digibulk">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -15,67 +15,65 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:windowSoftInputMode="stateHidden">
-        <activity android:name="thedhakadigital.digibulk.activity.MainActivity" />
+        <activity android:name=".activity.MainActivity" />
 
         <service
-            android:name="thedhakadigital.digibulk.service.SmsBroadCastService"
+            android:name=".service.SmsBroadCastService"
             android:enabled="true"
             android:exported="true" />
-
         <service android:name=".firebase.FirebaseInstanceService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-
         <service android:name=".firebase.FirebaseMessengingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
-        <receiver android:name="thedhakadigital.digibulk.receiver.DeliverReceiver" />
-        <receiver android:name="thedhakadigital.digibulk.receiver.SentReceiver" />
-        <receiver android:name="thedhakadigital.digibulk.receiver.TaskFinishReceiver" />
-        <receiver android:name="thedhakadigital.digibulk.receiver.StartServiceReciver" />
-        <receiver android:name="thedhakadigital.digibulk.receiver.EndServiceReceiver" />
+        <receiver android:name=".receiver.DeliverReceiver" />
+        <receiver android:name=".receiver.SentReceiver" />
+        <receiver android:name=".receiver.TaskFinishReceiver" />
+        <receiver android:name=".receiver.StartServiceReciver" />
+        <receiver android:name=".receiver.EndServiceReceiver" />
 
         <activity
-            android:name="thedhakadigital.digibulk.activity.UndeliveredList"
+            android:name=".activity.UndeliveredList"
             android:label="@string/title_activity_undelivered_list"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="thedhakadigital.digibulk.activity.StartActivity"
+            android:name=".activity.StartActivity"
             android:label="@string/title_activity_start"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name="thedhakadigital.digibulk.activity.TaskFinished"
+            android:name=".activity.TaskFinished"
             android:label="Task Finished"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-
-
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name="thedhakadigital.digibulk.activity.Settings"
+            android:name=".activity.Settings"
             android:label="@string/title_activity_settings"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="thedhakadigital.digibulk.activity.SaveMesseges"
+            android:name=".activity.SaveMesseges"
             android:label="@string/title_activity_save_messeges"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="thedhakadigital.digibulk.activity.AllUndeliveredList"
+            android:name=".activity.AllUndeliveredList"
             android:label="@string/title_activity_all_undelivered_list"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="thedhakadigital.digibulk.activity.SplashScreen"
+            android:name=".activity.ActivityNotificationMessage"
+            android:label="@string/title_activity_notification"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:name=".activity.SplashScreen"
             android:label="@string/title_activity_splash_screen"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -37,6 +37,7 @@
 
     <color name="feed_item_bg">#ffffff</color>
     <color name="feed_item_border">#c2c3c8</color>
+    <color name="feed_item_border2">#4de4e4e4</color>
 
     <color name="background_color">#7ED321</color>
 </resources>

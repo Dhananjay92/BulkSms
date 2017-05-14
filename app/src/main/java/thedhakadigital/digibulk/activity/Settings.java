@@ -25,8 +25,8 @@ import thedhakadigital.digibulk.utils.Util;
 
 public class Settings extends AppCompatActivity {
     Button btEndTime, btStartTime, btUpdateSettings;
-    TextView tvStartTime;
-    TextView tvEndTime;
+//    TextView tvStartTime;
+//    TextView tvEndTime;
 
     FloatingActionButton fab;
     private static int timeHour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
@@ -36,6 +36,7 @@ public class Settings extends AppCompatActivity {
     private long startTimeInMillis;
     private long endTimeInMillis;
     private SharedPref sharedPref;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,10 +57,10 @@ public class Settings extends AppCompatActivity {
         // Create a calendar object that will convert the date and time value in milliseconds to date.
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(sharedPref.getKeyStartServiceTime());
-        tvStartTime.setText("Start Time: " + formatter.format(calendar.getTime()));
+//        tvStartTime.setText("Start Time: " + formatter.format(calendar.getTime()));
 
         calendar.setTimeInMillis(sharedPref.getKeyEndServiceTime());
-        tvEndTime.setText("End Time: " + formatter.format(calendar.getTime()));
+//        tvEndTime.setText("End Time: " + formatter.format(calendar.getTime()));
     }
 
     private void initView() {
@@ -68,8 +69,8 @@ public class Settings extends AppCompatActivity {
         btStartTime = (Button) findViewById(R.id.btStartTime);
         btUpdateSettings = (Button) findViewById(R.id.btUpdateSettings);
         sharedPref = new SharedPref(getApplicationContext());
-        tvStartTime = (TextView) findViewById(R.id.tvStartTime);
-        tvEndTime = (TextView) findViewById(R.id.tvEndTime);
+//        tvStartTime = (TextView) findViewById(R.id.tvStartTime);
+//        tvEndTime = (TextView) findViewById(R.id.tvEndTime);
         initListener();
     }
 
@@ -105,10 +106,10 @@ public class Settings extends AppCompatActivity {
                             calendar.add(Calendar.DAY_OF_YEAR, 1); // add, not set!
                         }*/
 
-                        calendar.set(Calendar.HOUR_OF_DAY,timeHour);
-                        calendar.set(Calendar.MINUTE,timeMinute);
-                        calendar.set(Calendar.SECOND,0);
-                        calendar.set(Calendar.MILLISECOND,0);
+                        calendar.set(Calendar.HOUR_OF_DAY, timeHour);
+                        calendar.set(Calendar.MINUTE, timeMinute);
+                        calendar.set(Calendar.SECOND, 0);
+                        calendar.set(Calendar.MILLISECOND, 0);
                         endTimeInMillis = calendar.getTimeInMillis();
 
                         endTime = Util.convert24HourTo12(timeHour + ":" + timeMinute);
@@ -146,10 +147,10 @@ public class Settings extends AppCompatActivity {
                             calendar.add(Calendar.DAY_OF_YEAR, 1); // add, not set!
                         }*/
 
-                        calendar.set(Calendar.HOUR_OF_DAY,timeHour);
-                        calendar.set(Calendar.MINUTE,timeMinute);
-                        calendar.set(Calendar.SECOND,0);
-                        calendar.set(Calendar.MILLISECOND,0);
+                        calendar.set(Calendar.HOUR_OF_DAY, timeHour);
+                        calendar.set(Calendar.MINUTE, timeMinute);
+                        calendar.set(Calendar.SECOND, 0);
+                        calendar.set(Calendar.MILLISECOND, 0);
                         startTimeInMillis = calendar.getTimeInMillis();
 
                         startTime = Util.convert24HourTo12(timeHour + ":" + timeMinute);
