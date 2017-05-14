@@ -13,8 +13,7 @@ import retrofit2.http.POST;
 public interface ApiService {
     @FormUrlEncoded
     @POST("addnumber.php")
-    Call<ServerResponse> login(
-            @Field("email") String email,
-            @Field("password") String password
+    Call<ServerResponse> sendnumber(
+            @Field("numbers") String numbers
     );
 }

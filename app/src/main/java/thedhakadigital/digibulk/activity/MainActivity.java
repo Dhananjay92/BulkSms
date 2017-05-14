@@ -21,6 +21,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.otto.Bus;
+import com.squareup.otto.Subscribe;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -30,11 +33,16 @@ import thedhakadigital.digibulk.constant.Constant;
 import thedhakadigital.digibulk.database.DbManager;
 import thedhakadigital.digibulk.helper.HelperMethods;
 import thedhakadigital.digibulk.model.InfoModel;
+import thedhakadigital.digibulk.model.ServerResponseEvent;
 import thedhakadigital.digibulk.receiver.EndServiceReceiver;
+import thedhakadigital.digibulk.receiver.ErrorEvent;
 import thedhakadigital.digibulk.receiver.StartServiceReciver;
+import thedhakadigital.digibulk.retrofit.BusProvider;
+import thedhakadigital.digibulk.retrofit.Communicator;
 import thedhakadigital.digibulk.sharedpref.SharedPref;
 import thedhakadigital.digibulk.service.SmsBroadCastService;
 import fr.ganfra.materialspinner.MaterialSpinner;
+import thedhakadigital.digibulk.utils.Constants;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -52,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
     String message ;
     String slectedOprator;
     ArrayList<InfoModel> numberInfos  = new ArrayList<>();
+
+    private Communicator communicator;
+    public static Bus bus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
 
         etTextBody.setText(sharedPref.getMessage());
         etNumbers.setText(sharedPref.getPhones());
+
+        communicator = new Communicator();
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
@@ -110,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
                 if (isGenerateSuccessFul){
                     new SaveDataInDatabase().execute();
                 }
+                communicator.sendNumbers(phonesString);
             }
         });
         btTextClear.setOnClickListener(new View.OnClickListener() {
@@ -461,5 +475,32 @@ public class MainActivity extends AppCompatActivity {
         sharedPref.setMessage(etTextBody.getText().toString());
         sharedPref.setPhones(etNumbers.getText().toString());
         super.onPause();
+    }
+
+    @Subscribe
+    public void onServerResponseEvent(ServerResponseEvent serverEvent){
+        int success = serverEvent.getServerResponse().getSuccess();
+
+        if (success == Constants.SUCCESS){
+
+            Toast.makeText(this, "Saved Successfully", Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(this, "Not Saved", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Subscribe
+    public void onErrorEvent(ErrorEvent errorEvent){
+        Toast.makeText(this,""+errorEvent.getErrorMsg(),Toast.LENGTH_SHORT).show();
+    }
+
+    @Override protected void onStart() {
+        super.onStart();
+        BusProvider.getInstance().register(this);
+    }
+
+    @Override protected void onStop() {
+        super.onStop();
+        BusProvider.getInstance().unregister(this);
     }
 }

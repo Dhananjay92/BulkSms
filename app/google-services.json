@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "570988723188",
+    "firebase_url": "https://digibulk-69ba8.firebaseio.com",
+    "project_id": "digibulk-69ba8",
+    "storage_bucket": "digibulk-69ba8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570988723188:android:2b32be419dd45dda",
+        "android_client_info": {
+          "package_name": "thedhakadigital.digibulk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "570988723188-obj1kqek2ig7m5u3u2ocvgoc304f49ha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj75tpzE1kYCd_CeuVu9rZUEfESFcRSHI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
