@@ -362,11 +362,11 @@ public class MainActivity extends AppCompatActivity {
 
         //respond to menu item selection
         switch (item.getItemId()) {
-            case R.id.deliverdlist:
+            /*case R.id.deliverdlist:
                 startActivity(new Intent(this, TaskFinished.class));
                 return true;
             case R.id.help:
-                return true;
+                return true;*/
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -491,7 +491,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Subscribe
     public void onErrorEvent(ErrorEvent errorEvent){
-        Toast.makeText(this,""+errorEvent.getErrorMsg(),Toast.LENGTH_SHORT).show();
     }
 
     @Override protected void onStart() {
