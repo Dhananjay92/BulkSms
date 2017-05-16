@@ -12,8 +12,9 @@ public class ActivityNotificationMessage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification_message);
+        String message = getIntent().getStringExtra("message");
 //        String message = getIntent().getStringExtra("message");
         TextView tv =(TextView) findViewById(R.id.tvMessage);
-        tv.setText("hi");
+        tv.setText("message shown here?\n"+message);
     }
 }
