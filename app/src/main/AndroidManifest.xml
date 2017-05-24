@@ -21,16 +21,20 @@
             android:name=".service.SmsBroadCastService"
             android:enabled="true"
             android:exported="true" />
-        <service android:name=".firebase.FirebaseInstanceService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
-        <service android:name=".firebase.FirebaseMessengingService">
+
+        <service android:name=".notification.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <service android:name=".notification.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:exported="false" android:name=".notification.DeleteTokenService" />
 
         <receiver android:name=".receiver.DeliverReceiver" />
         <receiver android:name=".receiver.SentReceiver" />
@@ -66,6 +70,8 @@
             android:name=".activity.ActivityNotificationMessage"
             android:label="@string/title_activity_notification"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".activity.MessageShowActivity"/>
 
 
         <activity
